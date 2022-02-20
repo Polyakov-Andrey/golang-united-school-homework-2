@@ -7,7 +7,7 @@ import (
 
 const MESSAGE = "got %f, wanted %f"
 
-func TestCalcSquare_SidesTriangle(t *testing.T) {
+func TestCalcSquareSidesTriangle(t *testing.T) {
 
 	sideLen := 4.0
 	got := CalcSquare(sideLen, SidesTriangle)
@@ -18,7 +18,7 @@ func TestCalcSquare_SidesTriangle(t *testing.T) {
 	}
 }
 
-func TestCalcSquare_SidesSquare(t *testing.T) {
+func TestCalcSquareSidesSquare(t *testing.T) {
 
 	sideLen := 4.0
 	got := CalcSquare(sideLen, SidesSquare)
@@ -29,7 +29,7 @@ func TestCalcSquare_SidesSquare(t *testing.T) {
 	}
 }
 
-func TestCalcSquare_SidesCircle(t *testing.T) {
+func TestCalcSquareSidesCircle(t *testing.T) {
 
 	radius := 4.0
 	got := CalcSquare(radius, SidesCircle)
@@ -40,7 +40,7 @@ func TestCalcSquare_SidesCircle(t *testing.T) {
 	}
 }
 
-func TestCalcSquare_Any(t *testing.T) {
+func TestCalcSquareAny(t *testing.T) {
 
 	sideLen := 4.0
 	got := CalcSquare(sideLen, 5)
