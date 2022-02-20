@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+const MESSAGE = "got %f, wanted %f"
+
 func TestCalcSquare_SidesTriangle(t *testing.T) {
 
 	sideLen := 4.0
@@ -12,7 +14,7 @@ func TestCalcSquare_SidesTriangle(t *testing.T) {
 	want := sideLen * math.Sqrt(sideLen*sideLen-math.Pow(sideLen/2, 2)) / 2
 
 	if got != want {
-		t.Errorf("got %f, wanted %f", got, want)
+		t.Errorf(MESSAGE, got, want)
 	}
 }
 
@@ -23,18 +25,18 @@ func TestCalcSquare_SidesSquare(t *testing.T) {
 	want := math.Pow(sideLen, 2)
 
 	if got != want {
-		t.Errorf("got %f, wanted %f", got, want)
+		t.Errorf(MESSAGE, got, want)
 	}
 }
 
 func TestCalcSquare_SidesCircle(t *testing.T) {
 
-	sideLen := 4.0
-	got := CalcSquare(sideLen, SidesCircle)
-	want := math.Pi * math.Pow(sideLen, 2)
+	radius := 4.0
+	got := CalcSquare(radius, SidesCircle)
+	want := math.Pi * math.Pow(radius, 2)
 
 	if got != want {
-		t.Errorf("got %f, wanted %f", got, want)
+		t.Errorf(MESSAGE, got, want)
 	}
 }
 
