@@ -29,7 +29,7 @@ func CalcSquare(sideLen float64, sidesNum sides) float64 {
 	case SidesSquare:
 		s = sideLen * sideLen
 	case SidesCircle:
-		s = 2 * Pi * sideLen * sideLen
+		s = Pi * sideLen * sideLen
 	default:
 		s = 0
 	}
