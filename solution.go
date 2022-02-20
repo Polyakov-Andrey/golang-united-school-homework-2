@@ -11,15 +11,16 @@ import (
 	"math"
 )
 
-type intCustomType int
+type sides int
 
 const (
-	SidesTriangle Sides = 3
-	SidesSquare   Sides = 4
-	SidesCircle   Sides = 0
+	SidesTriangle sides   = 3
+	SidesSquare   sides   = 4
+	SidesCircle   sides   = 0
+	Pi            float64 = math.Pi
 )
 
-func CalcSquare(sideLen float64, sidesNum intCustomType) float64 {
+func CalcSquare(sideLen float64, sidesNum sides) float64 {
 	var s float64
 	switch sidesNum {
 	case SidesTriangle:
@@ -28,7 +29,7 @@ func CalcSquare(sideLen float64, sidesNum intCustomType) float64 {
 	case SidesSquare:
 		s = sideLen * sideLen
 	case SidesCircle:
-		s = 2 * math.Pi * sideLen * sideLen
+		s = 2 * Pi * sideLen * sideLen
 	default:
 		s = 0
 	}
